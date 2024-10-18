@@ -1,4 +1,4 @@
-:it:[![Zip and Upload Artifact](https://github.com/Baio1977/HP-630-CPU-Arrandale-Bios-Legacy-/actions/workflows/Artifact.yml/badge.svg)](https://github.com/Baio1977/HP-630-CPU-Arrandale-Bios-Legacy-/actions/workflows/Artifact.yml)
+[![Builds Artifact and Release](https://github.com/Baio1977/Hackintosh_HP630_CPU_Arrandale/actions/workflows/Artifact.yml/badge.svg)](https://github.com/Baio1977/Hackintosh_HP630_CPU_Arrandale/actions/workflows/Artifact.yml)
 
 [![](https://img.shields.io/badge/Reposity-Baio77-informational?style=flat&logo=apple&logoColor=white&color=9debeb)](https://github.com/Baio1977?tab=repositories)
 [![](https://img.shields.io/badge/Telegram-HackintoshLifeIT-informational?style=flat&logo=telegram&logoColor=white&color=5fb659)](https://t.me/HackintoshLife_it)
