@@ -5,9 +5,9 @@
 
 # HP630-CPU-Arrandale-Bios-Legacy-
 
-![HP630](./Screen/1.jpg)
+![HP630](./Screenshot/1.jpg)
 
-![infobigsur](./Screen/2.jpg)
+![infobigsur](./Screenshot/2.jpg)
 
 ### Computer Spec:
 
@@ -24,9 +24,9 @@
 
 ## Device
 
-![infoOS](./Screen/3.png)
-![infoPCI](./Screen/4.png) 
-![infoOS](./Screen/5.png)
+![infoOS](./Screenshot/3.png)
+![infoPCI](./Screenshot/4.png) 
+![infoOS](./Screenshot/5.png)
 
 ### What works:
 
