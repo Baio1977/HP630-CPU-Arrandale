@@ -1,0 +1,55 @@
+name: Builds Artifact and Release
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+  release:
+    types: [published]
+
+env:
+  PROJECT_TYPE: EFI
+
+jobs:
+  build:
+    name: Build
+    runs-on: macos-latest
+    permissions:
+      contents: write
+    env:
+      JOB_TYPE: BUILD
+
+    steps:
+    - uses: actions/checkout@v4.2.1
+
+    - name: Zip EFI
+      run: |
+        rm -Rf TOOLS
+        rm -Rf Screen
+        rm -Rf "SysReport"
+        rm -Rf .gitignore
+        rm -Rf "HP630 OC 0.8.5.ioreg"
+        rm -Rf README.md
+        rm -Rf opencore-2021-10-31-124928.txt
+        rm -Rf ".github"
+        rm -Rf ".git"
+        
+        zip -r HP-630-CPU-Arrandale.zip .
+        
+    - name: Upload artifact
+      uses: actions/upload-artifact@v4.4.3
+      with:
+        name: HP-630-CPU-Arrandale
+        path: HP-630-CPU-Arrandale.zip
+      
+    - name: Upload build
+      uses: svenstaro/upload-release-action@2.9.0
+      if: github.event_name != 'pull_request'
+      with:
+         repo_token: ${{ secrets.GITHUB_TOKEN }}
+         file: ./*.zip
+         tag: ${{ github.ref }}
+         release_name: EFI HP-630-CPU-Arrandale Hackintosh
+         body: ${{ github.event_name != 'release' && github.event.head_commit.message || '' }}
+         file_glob: true
+         overwrite: true
