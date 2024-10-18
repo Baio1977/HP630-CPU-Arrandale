@@ -25,7 +25,7 @@ jobs:
     - name: Zip EFI
       run: |
         rm -Rf TOOLS
-        rm -Rf Screen
+        rm -Rf Screenshot
         rm -Rf "SysReport"
         rm -Rf .gitignore
         rm -Rf "HP630 OC 0.8.5.ioreg"
