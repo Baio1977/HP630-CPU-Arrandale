@@ -297,7 +297,7 @@
                 <key>DiscardHibernateMap</key>
                 <false/>
                 <key>EnableSafeModeSlide</key>
-                <true/>
+                <false/>
                 <key>EnableWriteUnprotector</key>
                 <false/>
                 <key>FixupAppleEfiImages</key>
@@ -313,7 +313,7 @@
                 <key>ProtectUefiServices</key>
                 <false/>
                 <key>ProvideCustomSlide</key>
-                <true/>
+                <false/>
                 <key>ProvideMaxSlide</key>
                 <integer>0</integer>
                 <key>RebuildAppleMemoryMap</key>
@@ -321,7 +321,7 @@
                 <key>ResizeAppleGpuBars</key>
                 <integer>-1</integer>
                 <key>SetupVirtualMap</key>
-                <true/>
+                <false/>
                 <key>SignalAppleOS</key>
                 <false/>
                 <key>SyncRuntimePermissions</key>
@@ -441,6 +441,8 @@
                     <string>pci8086,3b09</string>
                     <key>device_type</key>
                     <string>ISA bridge</string>
+                    <key>ec-device</key>
+                    <string>generic</string>
                     <key>model</key>
                     <string>HM55 Chipset LPC Interface Controller</string>
                 </dict>
@@ -632,7 +634,7 @@
                     <key>MaxKernel</key>
                     <string></string>
                     <key>MinKernel</key>
-                    <string></string>
+                    <string>17.0.0</string>
                     <key>PlistPath</key>
                     <string>Contents/Info.plist</string>
                 </dict>
@@ -650,7 +652,7 @@
                     <key>MaxKernel</key>
                     <string></string>
                     <key>MinKernel</key>
-                    <string></string>
+                    <string>17.0.0</string>
                     <key>PlistPath</key>
                     <string>Contents/Info.plist</string>
                 </dict>
@@ -794,7 +796,7 @@
                     <key>MaxKernel</key>
                     <string></string>
                     <key>MinKernel</key>
-                    <string></string>
+                    <string>17.0.0</string>
                     <key>PlistPath</key>
                     <string>Contents/Info.plist</string>
                 </dict>
@@ -988,7 +990,7 @@
                 <key>EnablePassword</key>
                 <false/>
                 <key>ExposeSensitiveData</key>
-                <integer>6</integer>
+                <integer>15</integer>
                 <key>HaltLevel</key>
                 <integer>2147483648</integer>
                 <key>PasswordHash</key>
@@ -1055,6 +1057,8 @@
                 </dict>
                 <key>7C436110-AB2A-4BBB-A880-FE41995C9F82</key>
                 <dict>
+                    <key>EnableTRIM</key>
+                    <data>AQ==</data>
                     <key>ForceDisplayRotationInEFI</key>
                     <integer>0</integer>
                     <key>SystemAudioVolume</key>
@@ -1062,7 +1066,7 @@
                     <key>boot-args</key>
                     <string>-v keepsyms=1 debug=0x100 applbkl=0</string>
                     <key>csr-active-config</key>
-                    <data>AAAAAA==</data>
+                    <data>/wMAAA==</data>
                     <key>prev-lang:kbd</key>
                     <string>it-IT:223</string>
                     <key>run-efi-updater</key>
@@ -1088,31 +1092,27 @@
             <true/>
             <key>LegacySchema</key>
             <dict>
+                <key>36C28AB5-6566-4C50-9EBD-CBB920F83843</key>
+                <array>
+                    <string>current-network</string>
+                    <string>preferred-count</string>
+                    <string>preferred-networks</string>
+                </array>
                 <key>7C436110-AB2A-4BBB-A880-FE41995C9F82</key>
                 <array>
-                    <string>EFILoginHiDPI</string>
-                    <string>EFIBluetoothDelay</string>
-                    <string>LocationServicesEnabled</string>
+                    <string>EnableTRIM</string>
+                    <string>ForceDisplayRotationInEFI</string>
                     <string>SystemAudioVolume</string>
-                    <string>SystemAudioVolumeDB</string>
-                    <string>SystemAudioVolumeSaved</string>
                     <string>bluetoothActiveControllerInfo</string>
-                    <string>bluetoothInternalControllerInfo</string>
-                    <string>flagstate</string>
+                    <string>boot-args</string>
+                    <string>csr-active-config</string>
                     <string>fmm-computer-name</string>
-                    <string>fmm-mobileme-token-FMM</string>
-                    <string>fmm-mobileme-token-FMM-BridgeHasAccount</string>
-                    <string>nvda_drv</string>
+                    <string>intel-backlight-level</string>
                     <string>prev-lang:kbd</string>
+                    <string>run-efi-updater</string>
                 </array>
                 <key>8BE4DF61-93CA-11D2-AA0D-00E098032B8C</key>
-                <array>
-                    <string>Boot0080</string>
-                    <string>Boot0081</string>
-                    <string>Boot0082</string>
-                    <string>BootNext</string>
-                    <string>BootOrder</string>
-                </array>
+                <array/>
             </dict>
             <key>WriteFlash</key>
             <true/>
